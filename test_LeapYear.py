@@ -12,4 +12,7 @@ class TestClass:
         assert leapYear(2021) == False
 
     def test_two(self):
-        assert leapYear(2100) == True
+        assert leapYear(2100) == False
+
+    def test_three(self):
+        assert leapYear(2000) == True
