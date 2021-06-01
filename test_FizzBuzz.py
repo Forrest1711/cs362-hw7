@@ -2,6 +2,8 @@ def FizzBuzz():
     for i in range(0, 100):
         if i % 3 == 0 and i % 5 != 0:
             print("Fizz")
+        if i % 5 == 0 and i % 3 != 0:
+            print("Buzz")
 
 
 class TestClass:
@@ -26,4 +28,4 @@ class TestClass:
         for i in range(0, len(out)):
             if(out[i] == 'B' and out[i-1] != 'z'):
                 buzzCount += 1
-        assert buzzCount == 14
+        assert buzzCount == 13
