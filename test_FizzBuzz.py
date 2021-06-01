@@ -4,6 +4,8 @@ def FizzBuzz():
             print("Fizz")
         if i % 5 == 0 and i % 3 != 0:
             print("Buzz")
+        if i % 3 == 0 and i % 5 == 0:
+            print("FizzBuzz")
 
 
 class TestClass:
@@ -28,14 +30,14 @@ class TestClass:
             if(out[i] == 'B' and out[i-1] != 'z'):
                 buzzCount += 1
         assert buzzCount == 13
-    
-    def test_three(self,capsys):
+
+    def test_three(self, capsys):
         FizzBuzz()
-        out,err=capsys.readouterr()
+        out, err = capsys.readouterr()
 
         fizzBuzzCount = 0
 
-        for i in range(0,len(out)):
-            if(out[i] == 'F' and out[i+4]=='B'):
-                fizzBuzzCount +=1
-        assert fizzBuzzCount == 5
+        for i in range(0, len(out)):
+            if(out[i] == 'F' and out[i+4] == 'B'):
+                fizzBuzzCount += 1
+        assert fizzBuzzCount == 7
