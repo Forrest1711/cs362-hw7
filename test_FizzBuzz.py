@@ -23,9 +23,19 @@ class TestClass:
         out, err = capsys.readouterr()
 
         buzzCount = 0
-        fizzBuzzCount = 0
 
         for i in range(0, len(out)):
             if(out[i] == 'B' and out[i-1] != 'z'):
                 buzzCount += 1
         assert buzzCount == 13
+    
+    def test_three(self,capsys):
+        FizzBuzz()
+        out,err=capsys.readouterr()
+
+        fizzBuzzCount = 0
+
+        for i in range(0,len(out)):
+            if(out[i] == 'F' and out[i+4]=='B'):
+                fizzBuzzCount +=1
+        assert fizzBuzzCount == 5
